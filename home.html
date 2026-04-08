@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Screen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@100..900&family=Fira+Code:wght@300..700&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <style type="text/tailwindcss">
+      @import "tailwindcss";
+      @theme inline {
+        --color-background: var(--background);
+        --color-foreground: var(--foreground);
+        --color-primary: var(--primary);
+        --color-primary-foreground: var(--primary-foreground);
+        --color-secondary: var(--secondary);
+        --color-secondary-foreground: var(--secondary-foreground);
+        --color-tertiary: var(--tertiary);
+        --color-muted: var(--muted);
+        --color-muted-foreground: var(--muted-foreground);
+        --color-accent: var(--accent);
+        --color-destructive: var(--destructive);
+        --color-card: var(--card);
+        --color-card-foreground: var(--card-foreground);
+        --color-border: var(--border);
+        --color-input: var(--input);
+        --color-ring: var(--ring);
+        --radius-sm: calc(var(--radius) - 4px);
+        --radius-md: calc(var(--radius) - 2px);
+        --radius-lg: var(--radius);
+        --font-family-sans: var(--font-sans);
+        --font-family-heading: var(--font-heading);
+      }
+      :root { --radius: 0rem;
+        --primary: #bfa16d;
+        --accent: #fdfbf7;
+        --secondary: #1c1c1c;
+        --secondary-foreground: #ffffff;
+        --ring: #bfa16d;
+        --background: #fdfbf7;
+        --foreground: #1c1c1c;
+        --card: #ffffff;
+        --primary-foreground: #ffffff;
+        --border: #e5e0d8; }
+    </style>
+  </head>
+  <body>
+<div class="min-h-screen w-full bg-background flex flex-col relative font-sans text-foreground">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-8">
+        <button class="lg:hidden p-2"><iconify-icon icon="lucide:menu" class="text-2xl"></iconify-icon></button>
+        <nav class="hidden lg:flex items-center gap-8 text-sm uppercase tracking-widest font-medium">
+          <a href="#" class="hover:text-primary transition-colors">Shop All</a>
+          <a href="#" class="hover:text-primary transition-colors">Collections</a>
+          <a href="#" class="hover:text-primary transition-colors">Our Story</a>
+        </nav>
+      </div>
+      
+      <div class="absolute left-1/2 -translate-x-1/2">
+        <h1 class="text-3xl font-heading font-bold tracking-tighter uppercase italic">Luxe by Zaruni</h1>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <button class="p-2 hover:text-primary transition-colors"><iconify-icon icon="lucide:search" class="text-xl"></iconify-icon></button>
+        <button class="p-2 hover:text-primary transition-colors relative">
+          <iconify-icon icon="lucide:shopping-cart" class="text-xl"></iconify-icon>
+          <span class="absolute top-0 right-0 bg-primary text-primary-foreground text-[10px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="flex-1 overflow-y-auto">
+    <section class="relative h-[80vh] overflow-hidden flex items-center justify-center">
+      <img src="https://uxmagic.blob.core.windows.net/public/agent-images/luxe-hero-1-1775664797932-4ilw940lqiq.png" alt="Luxe Collection" class="absolute inset-0 w-full h-full object-cover brightness-90" />
+      <div class="relative z-10 text-center text-white px-6">
+        <span class="block text-sm uppercase tracking-[0.3em] mb-4 font-medium">New Arrival</span>
+        <h2 class="text-5xl md:text-7xl font-heading font-light italic mb-8 drop-shadow-lg">The Golden Hour</h2>
+        <button class="bg-primary text-primary-foreground px-12 py-4 text-sm uppercase tracking-widest hover:bg-secondary transition-all duration-300">Explore Collection</button>
+      </div>
+    </section>
+
+    <!-- Featured Collections -->
+    <section class="py-24 max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h3 class="text-3xl font-heading italic mb-2">Curated for Elegance</h3>
+        <p class="text-muted-foreground uppercase tracking-widest text-xs">Discover our most loved pieces</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="group cursor-pointer">
+          <div class="aspect-[4/5] overflow-hidden bg-muted mb-6">
+            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80" alt="Necklaces" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          </div>
+          <h4 class="text-lg font-heading italic">Signature Necklaces</h4>
+          <p class="text-sm text-muted-foreground uppercase tracking-widest mt-1">Shop Now</p>
+        </div>
+        
+        <div class="group cursor-pointer">
+          <div class="aspect-[4/5] overflow-hidden bg-muted mb-6">
+            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80" alt="Earrings" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          </div>
+          <h4 class="text-lg font-heading italic">Timeless Earrings</h4>
+          <p class="text-sm text-muted-foreground uppercase tracking-widest mt-1">Shop Now</p>
+        </div>
+
+        <div class="group cursor-pointer">
+          <div class="aspect-[4/5] overflow-hidden bg-muted mb-6">
+            <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=800&q=80" alt="Rings" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          </div>
+          <h4 class="text-lg font-heading italic">Luxury Rings</h4>
+          <p class="text-sm text-muted-foreground uppercase tracking-widest mt-1">Shop Now</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagram Feed Teaser -->
+    <section class="bg-accent py-24 border-y border-border">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+          <div>
+            <h3 class="text-3xl font-heading italic mb-2">As Seen on Instagram</h3>
+            <p class="text-muted-foreground">Follow @luxebyzaruni for daily inspiration</p>
+          </div>
+          <a href="https://instagram.com/luxebyzaruni" class="text-sm uppercase tracking-widest border-b border-foreground pb-1 font-medium">Follow Us</a>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          <div class="aspect-square bg-muted overflow-hidden"><img src="https://images.unsplash.com/photo-1515562141207-7a18b5ce3377?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover" /></div>
+          <div class="aspect-square bg-muted overflow-hidden"><img src="https://images.unsplash.com/photo-1535633302704-b0292395c750?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover" /></div>
+          <div class="aspect-square bg-muted overflow-hidden"><img src="https://images.unsplash.com/photo-1611085583191-a3b1a308c011?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover" /></div>
+          <div class="aspect-square bg-muted overflow-hidden"><img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover" /></div>
+          <div class="aspect-square bg-muted overflow-hidden hidden lg:block"><img src="https://images.unsplash.com/photo-1543294001-f7cd5d7fb516?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-secondary-foreground py-20">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div class="col-span-1 md:col-span-2">
+          <h4 class="text-2xl font-heading font-bold uppercase italic mb-6">Luxe by Zaruni</h4>
+          <p class="text-muted-foreground max-w-sm mb-8">Crafting timeless elegance for the modern woman. Every piece tells a story of luxury and sophistication.</p>
+          <div class="flex gap-6">
+            <iconify-icon icon="lucide:instagram" class="text-xl"></iconify-icon>
+            <iconify-icon icon="lucide:facebook" class="text-xl"></iconify-icon>
+            <iconify-icon icon="lucide:mail" class="text-xl"></iconify-icon>
+          </div>
+        </div>
+        <div>
+          <h5 class="text-sm uppercase tracking-widest font-bold mb-6">Quick Links</h5>
+          <ul class="space-y-4 text-sm text-muted-foreground">
+            <li><a href="#" class="hover:text-primary transition-colors">Shipping & Returns</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Care Guide</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Contact Us</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-sm uppercase tracking-widest font-bold mb-6">Newsletter</h5>
+          <p class="text-sm text-muted-foreground mb-4">Join our inner circle for exclusive access.</p>
+          <div class="flex border-b border-muted-foreground/30 pb-2">
+            <input type="email" placeholder="Email Address" class="bg-transparent border-none outline-none flex-1 text-sm" />
+            <button class="text-primary uppercase text-xs tracking-widest font-bold">Join</button>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-muted-foreground/10 text-[10px] uppercase tracking-widest text-muted-foreground text-center">
+        &copy; 2024 Luxe by Zaruni. All Rights Reserved.
+      </div>
+    </footer>
+  </main>
+</div>
+</body></html>
