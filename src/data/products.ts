@@ -1,0 +1,122 @@
+import type { Product } from '../types';
+
+export const products: Product[] = [
+  {
+    id: '1',
+    name: 'Golden Crescent Necklace',
+    price: 2800,
+    originalPrice: 3500,
+    category: 'necklaces',
+    images: [
+      'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1611085583191-a3b1a308c011?auto=format&fit=crop&w=800&q=80',
+    ],
+    description: 'A delicate crescent pendant crafted in 22K gold-plated brass with hand-polished finish. A timeless piece that catches the light beautifully.',
+    details: ['22K gold plating', 'Brass base', '45cm chain length', 'Lobster clasp', 'Hypoallergenic'],
+    badge: 'Sale',
+    inStock: true,
+    featured: true,
+  },
+  {
+    id: '2',
+    name: 'Pearl Drop Earrings',
+    price: 1800,
+    category: 'earrings',
+    images: [
+      'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80',
+    ],
+    description: 'Lustrous freshwater pearl drops suspended from a sleek gold hoop. Effortlessly elegant for any occasion.',
+    details: ['Freshwater pearls', 'Gold-plated hooks', '4cm drop length', 'Nickel-free'],
+    inStock: true,
+    featured: true,
+  },
+  {
+    id: '3',
+    name: 'Sunburst Statement Ring',
+    price: 2200,
+    category: 'rings',
+    images: [
+      'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=800&q=80',
+    ],
+    description: 'A bold sunburst design with micro-pavé zirconia stones. Makes every hand look like art.',
+    details: ['Adjustable band', 'Cubic zirconia stones', '18K gold finish', 'Tarnish resistant'],
+    badge: 'New',
+    inStock: true,
+    featured: true,
+  },
+  {
+    id: '4',
+    name: 'Layered Chain Bracelet',
+    price: 1500,
+    category: 'bracelets',
+    images: [
+      'https://images.unsplash.com/photo-1515562141207-7a18b5ce3377?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1543294001-f7cd5d7fb516?auto=format&fit=crop&w=800&q=80',
+    ],
+    description: 'Three delicate gold chains layered to perfection. Versatile enough to wear alone or stacked.',
+    details: ['3-layer design', 'Toggle clasp', '18cm length + 3cm extender', 'Water resistant'],
+    inStock: true,
+    featured: true,
+  },
+  {
+    id: '5',
+    name: 'Twisted Hoop Earrings',
+    price: 1200,
+    category: 'earrings',
+    images: [
+      'https://images.unsplash.com/photo-1535633302704-b0292395c750?auto=format&fit=crop&w=800&q=80',
+    ],
+    description: 'Classic hoops reimagined with a twisted texture that adds dimension and character.',
+    details: ['Twisted gold texture', '3cm diameter', 'Push-back closure', 'Lightweight'],
+    inStock: true,
+  },
+  {
+    id: '6',
+    name: 'Antique Coin Pendant',
+    price: 3200,
+    category: 'necklaces',
+    images: [
+      'https://images.unsplash.com/photo-1611085583191-a3b1a308c011?auto=format&fit=crop&w=800&q=80',
+    ],
+    description: 'Inspired by ancient coins, this pendant carries an air of history and mystery. A conversation starter.',
+    details: ['Antique finish', 'Engraved detailing', '50cm box chain', 'Gift boxed'],
+    badge: 'Bestseller',
+    inStock: true,
+  },
+  {
+    id: '7',
+    name: 'Celestial Stack Rings',
+    price: 1900,
+    category: 'rings',
+    images: [
+      'https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=800&q=80',
+    ],
+    description: 'A set of 3 stackable rings featuring moon, star, and sun motifs. Mix and match as you please.',
+    details: ['Set of 3 rings', 'Sizes 5–9 available', 'Mixed textures', 'Gift set packaging'],
+    inStock: true,
+  },
+  {
+    id: '8',
+    name: 'Emerald Stud Earrings',
+    price: 2600,
+    originalPrice: 3000,
+    category: 'earrings',
+    images: [
+      'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80',
+    ],
+    description: 'Rich green cubic zirconia in a classic 4-prong gold setting. Understated luxury at its finest.',
+    details: ['Green CZ stones', '6mm stone diameter', 'Screw-back posts', 'Hypoallergenic'],
+    badge: 'Sale',
+    inStock: false,
+  },
+];
+
+export const categories = [
+  { id: 'all', name: 'All Pieces', image: '', count: products.length },
+  { id: 'necklaces', name: 'Necklaces', image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80', count: products.filter(p => p.category === 'necklaces').length },
+  { id: 'earrings', name: 'Earrings', image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80', count: products.filter(p => p.category === 'earrings').length },
+  { id: 'rings', name: 'Rings', image: 'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=800&q=80', count: products.filter(p => p.category === 'rings').length },
+  { id: 'bracelets', name: 'Bracelets', image: 'https://images.unsplash.com/photo-1515562141207-7a18b5ce3377?auto=format&fit=crop&w=800&q=80', count: products.filter(p => p.category === 'bracelets').length },
+];
