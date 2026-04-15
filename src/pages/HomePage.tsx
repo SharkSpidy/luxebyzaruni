@@ -116,9 +116,9 @@ export default function HomePage() {
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 8 }}>
             {[
-              'https://images.unsplash.com/photo-1515562141207-7a18b5ce3377?auto=format&fit=crop&w=400&q=80',
-              'https://images.unsplash.com/photo-1535633302704-b0292395c750?auto=format&fit=crop&w=400&q=80',
-              'https://images.unsplash.com/photo-1611085583191-a3b1a308c011?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=400',
+              'https://images.unsplash.com/photo-1589128777073-263566ae5e4d?auto=format&fit=crop&w=400',
+              'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=400',
               'https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=400&q=80',
               'https://images.unsplash.com/photo-1543294001-f7cd5d7fb516?auto=format&fit=crop&w=400&q=80',
             ].map((src, i) => (
